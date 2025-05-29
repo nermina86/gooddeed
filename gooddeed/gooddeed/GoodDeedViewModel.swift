@@ -16,7 +16,7 @@ class GoodDeedViewModel: ObservableObject {
     init() {
         loadSavedDeeds()
         preferredDeedCount = UserDefaults.standard.integer(forKey: "preferredDeedCount")
-        if preferredDeedCount == 0 { preferredDeedCount = 5 } // default value
+        if preferredDeedCount == 0 { preferredDeedCount = 5 }
         
         if isNewDay() {
             refreshDeeds()
@@ -30,21 +30,18 @@ class GoodDeedViewModel: ObservableObject {
         let customDeeds = todayDeeds.filter { $0.isCustom }
         let needed = max(0, preferredDeedCount - customDeeds.count)
         
-        // Filter auto deeds excluding custom deeds by text
         let availableAutoDeeds = allDeeds
             .filter { deed in
-                !deed.isCustom && !customDeeds.contains(where: { $0.text.trimmingCharacters(in: .whitespacesAndNewlines) == deed.text.trimmingCharacters(in: .whitespacesAndNewlines) })
+                !deed.isCustom &&
+                !customDeeds.contains(where: { $0.text.trimmingCharacters(in: .whitespacesAndNewlines) == deed.text.trimmingCharacters(in: .whitespacesAndNewlines) })
             }
             .shuffled()
             .prefix(needed)
         
-        // Combine custom and auto deeds (new list)
         let newDeeds = customDeeds + availableAutoDeeds
         
-        // Create a dictionary of completed deeds from old todayDeeds for quick lookup
         let completedDict = Dictionary(uniqueKeysWithValues: todayDeeds.map { ($0.text, $0.isCompleted) })
         
-        // Map newDeeds but preserve completed state if previously completed
         todayDeeds = newDeeds.map { deed in
             var d = deed
             d.isCompleted = completedDict[deed.text] ?? false
@@ -53,6 +50,7 @@ class GoodDeedViewModel: ObservableObject {
         
         saveTodayDeeds()
     }
+    
     func saveTodayDeeds() {
         if let data = try? JSONEncoder().encode(todayDeeds) {
             UserDefaults.standard.set(data, forKey: "todayDeeds")
@@ -71,9 +69,10 @@ class GoodDeedViewModel: ObservableObject {
     
     func snooze(deed: GoodDeed) {
         if let index = todayDeeds.firstIndex(where: { $0.id == deed.id }) {
+            // Replace with a random deed from allDeeds
             todayDeeds[index] = allDeeds.randomElement() ?? GoodDeed(text: "Do something kind!")
+            saveTodayDeeds()
         }
-        saveTodayDeeds()
     }
     
     func addDeed(newDeed: String) {
@@ -85,12 +84,18 @@ class GoodDeedViewModel: ObservableObject {
         saveTodayDeeds()
     }
     
+    func markAsDone(deed: GoodDeed) {
+        if let index = todayDeeds.firstIndex(where: { $0.id == deed.id }) {
+            todayDeeds[index].isCompleted.toggle()
+            saveTodayDeeds()
+        }
+    }
+    
     private func loadSavedDeeds() {
         if let data = UserDefaults.standard.data(forKey: savedDeedsKey),
            let saved = try? JSONDecoder().decode([GoodDeed].self, from: data) {
             allDeeds = saved
         } else {
-            // Default deeds on first launch
             allDeeds = [
                 GoodDeed(text: "Help someone with their groceries"),
                 GoodDeed(text: "Call an old friend to see how he is"),
@@ -117,7 +122,6 @@ class GoodDeedViewModel: ObservableObject {
     }
 }
 
-// Helpers for daily reset
 private let lastRefreshDateKey = "lastDeedRefreshDate"
 
 private func isNewDay() -> Bool {
@@ -125,9 +129,5 @@ private func isNewDay() -> Bool {
         return true
     }
     return !Calendar.current.isDateInToday(lastDate)
-}
-
-func markAsDone(deed: GoodDeed) {
-    // This is a global function but should belong inside GoodDeedViewModel, so move it there
 }
 

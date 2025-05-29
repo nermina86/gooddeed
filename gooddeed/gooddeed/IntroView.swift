@@ -6,14 +6,16 @@ struct IntroView: View {
 
     var body: some View {
         ZStack {
-            // Background gradient
-            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.6), Color.green.opacity(0.6)]),
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all)
+            // Fully opaque background gradient
+            LinearGradient(
+                gradient: Gradient(colors: [Color.blue, Color.green]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .edgesIgnoringSafeArea(.all)
 
             VStack(spacing: 30) {
-                Spacer().frame(height: 40)  // Space before header
+                Spacer().frame(height: 40)
 
                 Text("🌟 Welcome to Good Deeds APP!")
                     .font(.system(size: 34, weight: .bold))
@@ -21,14 +23,14 @@ struct IntroView: View {
                     .multilineTextAlignment(.center)
                     .padding(.top)
 
-                Text("Each day, you'll get simple but meaningful actions to make this world brighter place. You can skip deeds that doesn’t fit in or add your own ones ")
+                Text("Each day, you'll get simple but meaningful actions to make this world a brighter place. You can skip deeds that don’t fit or add your own.")
                     .font(.body)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
 
                 VStack(spacing: 16) {
-                    Text("How many deeds per day you want to show?")
+                    Text("How many deeds per day do you want to show?")
                         .font(.headline)
                         .foregroundColor(.white)
 
@@ -71,3 +73,4 @@ struct IntroView_Previews: PreviewProvider {
     }
 }
 #endif
+
