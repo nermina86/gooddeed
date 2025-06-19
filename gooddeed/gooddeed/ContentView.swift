@@ -1,5 +1,3 @@
-// ContentView.swift
-
 import SwiftUI
 
 struct ContentView: View {
@@ -9,12 +7,15 @@ struct ContentView: View {
     @State private var newDeedText = ""
     @State private var showCongrats = false
     @State private var isDoneForToday = false
+    @State private var showShareSheet = false
 
     var body: some View {
         ZStack {
+            if !showIntro { }
+
             NavigationView {
                 VStack(spacing: 20) {
-                    Text("Today's Good Deeds")
+                    Text("Today's Good Deeds you will do")
                         .font(.headline)
                         .padding(.top, 20)
 
@@ -72,7 +73,6 @@ struct ContentView: View {
                     NotificationManager.shared.requestPermission()
                     NotificationManager.shared.logAppOpen()
                     NotificationManager.shared.scheduleSmart(message: "How about one small good deed today?")
-   //                 NotificationManager.shared.scheduleTestNotification()
                 }
             }
 
@@ -83,6 +83,8 @@ struct ContentView: View {
             if showIntro {
                 introOverlay
             }
+
+            ShareView(isPresented: $showShareSheet)
         }
     }
 
@@ -122,6 +124,7 @@ struct ContentView: View {
                     .font(.title2)
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
+
                 Button("Done for Today") {
                     withAnimation {
                         isDoneForToday = true
@@ -135,6 +138,25 @@ struct ContentView: View {
                 .foregroundColor(.blue)
                 .cornerRadius(10)
                 .padding(.horizontal)
+
+                // 🟡 TikTok-style Share dugme sa print()
+                Button(action: {
+                    print("Share button tapped")  // ← Ovdje provjeravaš klik
+                    showShareSheet = true
+                }) {
+                    HStack {
+                        Image(systemName: "square.and.arrow.up")
+                        Text("Share Your Good Deeds")
+                    }
+                    .font(.headline)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.yellow)
+                    .foregroundColor(.black)
+                    .cornerRadius(10)
+                    .padding(.horizontal)
+                }
+
                 Spacer()
             }
             .padding()
@@ -155,3 +177,4 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 #endif
+
