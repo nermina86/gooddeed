@@ -29,6 +29,7 @@ struct IntroView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
 
+                
                 VStack(spacing: 16) {
                     Text("How many deeds per day do you want to show?")
                         .font(.headline)
@@ -59,8 +60,18 @@ struct IntroView: View {
                 }
                 .padding(.horizontal)
 
+                
+                
+                // ✅ Privacy Policy Button
+                        NavigationLink(destination: PrivacyPolicyView()) {
+                            Text("Privacy Policy")
+                                .font(.footnote)
+                                .underline()
+                                .foregroundColor(.gray)
+                        }
                 Spacer()
             }
+            
             .padding()
         }
     }

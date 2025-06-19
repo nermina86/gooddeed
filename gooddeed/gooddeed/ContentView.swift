@@ -164,8 +164,10 @@ struct ContentView: View {
     }
 
     private var introOverlay: some View {
-        IntroView(showIntro: $showIntro, viewModel: viewModel)
-            .edgesIgnoringSafeArea(.all)
+        NavigationView {
+            IntroView(showIntro: $showIntro, viewModel: viewModel)
+        }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
