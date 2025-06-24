@@ -10,9 +10,22 @@
 		3EAF38872DE26243003A8DED /* gooddeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gooddeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3EA6C5492E0AEAB0007FAD51 /* Exceptions for "gooddeed" folder in "gooddeed" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 3EAF38862DE26243003A8DED /* gooddeed */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3EAF38892DE26243003A8DED /* gooddeed */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3EA6C5492E0AEAB0007FAD51 /* Exceptions for "gooddeed" folder in "gooddeed" target */,
+			);
 			path = gooddeed;
 			sourceTree = "<group>";
 		};
@@ -255,6 +268,7 @@
 				DEVELOPMENT_TEAM = F94S465KR5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = gooddeed/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = GoodDeeds;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -287,6 +301,7 @@
 				DEVELOPMENT_TEAM = F94S465KR5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = gooddeed/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = GoodDeeds;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
