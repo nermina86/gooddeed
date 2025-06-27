@@ -19,7 +19,7 @@ final class GoodDeedTests: XCTestCase {
     func testLaunchPerformance() throws {
         measure {
             // Ovdje pokreni kod koji mjeriš
-            _ = 1...10_000.map { $0 * 2 }
+            _ = (1...10_000).map { $0 * 2 }
         }
     }
 
