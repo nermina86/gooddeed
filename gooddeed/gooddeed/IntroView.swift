@@ -31,7 +31,7 @@ struct IntroView: View {
 
                 
                 VStack(spacing: 16) {
-                    Text("How many deeds per day do you want to show?")
+                    Text("How many deeds per day do you want to be displayed?")
                         .font(.headline)
                         .foregroundColor(.white)
 

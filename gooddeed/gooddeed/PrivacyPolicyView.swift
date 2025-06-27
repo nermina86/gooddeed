@@ -19,8 +19,8 @@ Thank you for using Good Deeds Reminder! Your privacy is important to us.
 1. No Data Collection  
 We do not collect, store, or share any personal information or user data. All reminders and data created within the app remain on your device and are not transmitted to any servers.
 
-2. No Third-Party Services  
-The app does not use any third-party analytics, tracking tools, advertising SDKs, or external APIs.
+2. We use Firebase Analytics 
+We collect anonymous usage data to help improve our app. This data may include information about your device, app interactions, and usage patterns. No personally identifiable information is collected or shared. You can opt out of analytics tracking by adjusting your device settings.
 
 3. Local Storage  
 All information is stored locally on your device. You have full control over your data and can delete it anytime by removing the app.

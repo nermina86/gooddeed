@@ -1,20 +1,17 @@
 import SwiftUI
-import UserNotifications
+import Firebase
 
 @main
-struct GoodDeedsApp: App {
+struct gooddeedApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     init() {
-        NotificationManager.shared.requestPermission()
-        NotificationManager.shared.logAppOpen()
-        NotificationManager.shared.scheduleSmart(message: "How about one small good deed today?")
+        FirebaseApp.configure()
     }
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .onAppear {
-                    NotificationManager.shared.logAppOpen()
-                }
         }
     }
 }

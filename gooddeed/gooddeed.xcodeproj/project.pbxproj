@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3EBC42B82E0EEE4400C6A23F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBC42B72E0EEE4400C6A23F /* XCTest.framework */; platformFilter = ios; };
+		3EBC42BD2E0EF92800C6A23F /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBC42BC2E0EF92800C6A23F /* FirebaseAI */; };
+		3EBC42BF2E0EF92800C6A23F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBC42BE2E0EF92800C6A23F /* FirebaseAnalyticsWithoutAdIdSupport */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EBC42BD2E0EF92800C6A23F /* FirebaseAI in Frameworks */,
+				3EBC42BF2E0EF92800C6A23F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +122,8 @@
 			);
 			name = gooddeed;
 			packageProductDependencies = (
+				3EBC42BC2E0EF92800C6A23F /* FirebaseAI */,
+				3EBC42BE2E0EF92800C6A23F /* FirebaseAnalyticsWithoutAdIdSupport */,
 			);
 			productName = gooddeed;
 			productReference = 3EAF38872DE26243003A8DED /* gooddeed.app */;
@@ -174,6 +180,9 @@
 			);
 			mainGroup = 3EAF387E2DE26243003A8DED;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3EBC42BB2E0EF92800C6A23F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3EAF38882DE26243003A8DED /* Products */;
 			projectDirPath = "";
@@ -480,6 +489,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3EBC42BB2E0EF92800C6A23F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3EBC42BC2E0EF92800C6A23F /* FirebaseAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3EBC42BB2E0EF92800C6A23F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAI;
+		};
+		3EBC42BE2E0EF92800C6A23F /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3EBC42BB2E0EF92800C6A23F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3EAF387F2DE26243003A8DED /* Project object */;
 }
