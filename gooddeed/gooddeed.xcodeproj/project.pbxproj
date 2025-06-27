@@ -7,12 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EA8B19F2E0F274E005308F3 /* gooddeedswatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3EA8B17F2E0F274B005308F3 /* gooddeedswatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3EBC42B82E0EEE4400C6A23F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBC42B72E0EEE4400C6A23F /* XCTest.framework */; platformFilter = ios; };
 		3EBC42BD2E0EF92800C6A23F /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBC42BC2E0EF92800C6A23F /* FirebaseAI */; };
 		3EBC42BF2E0EF92800C6A23F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBC42BE2E0EF92800C6A23F /* FirebaseAnalyticsWithoutAdIdSupport */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3EA8B18C2E0F274E005308F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EAF387F2DE26243003A8DED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EA8B17E2E0F274B005308F3;
+			remoteInfo = "gooddeedswatch Watch App";
+		};
+		3EA8B1962E0F274E005308F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EAF387F2DE26243003A8DED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EA8B17E2E0F274B005308F3;
+			remoteInfo = "gooddeedswatch Watch App";
+		};
+		3EA8B19D2E0F274E005308F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EAF387F2DE26243003A8DED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EA8B17E2E0F274B005308F3;
+			remoteInfo = "gooddeedswatch Watch App";
+		};
 		3EBC42AF2E0EEC7600C6A23F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3EAF387F2DE26243003A8DED /* Project object */;
@@ -22,7 +44,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3EA8B1A02E0F274E005308F3 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				3EA8B19F2E0F274E005308F3 /* gooddeedswatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3EA8B17F2E0F274B005308F3 /* gooddeedswatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gooddeedswatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EA8B18B2E0F274E005308F3 /* gooddeedswatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gooddeedswatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EA8B1952E0F274E005308F3 /* gooddeedswatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gooddeedswatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EAF38872DE26243003A8DED /* gooddeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gooddeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBC42AB2E0EEC7600C6A23F /* GoodDeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodDeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBC42B72E0EEE4400C6A23F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -39,6 +78,21 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		3EA8B1802E0F274B005308F3 /* gooddeedswatch Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "gooddeedswatch Watch App";
+			sourceTree = "<group>";
+		};
+		3EA8B18E2E0F274E005308F3 /* gooddeedswatch Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "gooddeedswatch Watch AppTests";
+			sourceTree = "<group>";
+		};
+		3EA8B1982E0F274E005308F3 /* gooddeedswatch Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "gooddeedswatch Watch AppUITests";
+			sourceTree = "<group>";
+		};
 		3EAF38892DE26243003A8DED /* gooddeed */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -55,6 +109,27 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3EA8B17C2E0F274B005308F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EA8B1882E0F274E005308F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EA8B1922E0F274E005308F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3EAF38842DE26243003A8DED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -80,6 +155,9 @@
 			children = (
 				3EAF38892DE26243003A8DED /* gooddeed */,
 				3EBC42AC2E0EEC7600C6A23F /* GoodDeedTests */,
+				3EA8B1802E0F274B005308F3 /* gooddeedswatch Watch App */,
+				3EA8B18E2E0F274E005308F3 /* gooddeedswatch Watch AppTests */,
+				3EA8B1982E0F274E005308F3 /* gooddeedswatch Watch AppUITests */,
 				3EBC42B62E0EEE4400C6A23F /* Frameworks */,
 				3EAF38882DE26243003A8DED /* Products */,
 			);
@@ -90,6 +168,9 @@
 			children = (
 				3EAF38872DE26243003A8DED /* gooddeed.app */,
 				3EBC42AB2E0EEC7600C6A23F /* GoodDeedTests.xctest */,
+				3EA8B17F2E0F274B005308F3 /* gooddeedswatch Watch App.app */,
+				3EA8B18B2E0F274E005308F3 /* gooddeedswatch Watch AppTests.xctest */,
+				3EA8B1952E0F274E005308F3 /* gooddeedswatch Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +186,74 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3EA8B17E2E0F274B005308F3 /* gooddeedswatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EA8B1A72E0F274E005308F3 /* Build configuration list for PBXNativeTarget "gooddeedswatch Watch App" */;
+			buildPhases = (
+				3EA8B17B2E0F274B005308F3 /* Sources */,
+				3EA8B17C2E0F274B005308F3 /* Frameworks */,
+				3EA8B17D2E0F274B005308F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3EA8B1802E0F274B005308F3 /* gooddeedswatch Watch App */,
+			);
+			name = "gooddeedswatch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "gooddeedswatch Watch App";
+			productReference = 3EA8B17F2E0F274B005308F3 /* gooddeedswatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3EA8B18A2E0F274E005308F3 /* gooddeedswatch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EA8B1A82E0F274E005308F3 /* Build configuration list for PBXNativeTarget "gooddeedswatch Watch AppTests" */;
+			buildPhases = (
+				3EA8B1872E0F274E005308F3 /* Sources */,
+				3EA8B1882E0F274E005308F3 /* Frameworks */,
+				3EA8B1892E0F274E005308F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EA8B18D2E0F274E005308F3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				3EA8B18E2E0F274E005308F3 /* gooddeedswatch Watch AppTests */,
+			);
+			name = "gooddeedswatch Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "gooddeedswatch Watch AppTests";
+			productReference = 3EA8B18B2E0F274E005308F3 /* gooddeedswatch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3EA8B1942E0F274E005308F3 /* gooddeedswatch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EA8B1A92E0F274E005308F3 /* Build configuration list for PBXNativeTarget "gooddeedswatch Watch AppUITests" */;
+			buildPhases = (
+				3EA8B1912E0F274E005308F3 /* Sources */,
+				3EA8B1922E0F274E005308F3 /* Frameworks */,
+				3EA8B1932E0F274E005308F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EA8B1972E0F274E005308F3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				3EA8B1982E0F274E005308F3 /* gooddeedswatch Watch AppUITests */,
+			);
+			name = "gooddeedswatch Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "gooddeedswatch Watch AppUITests";
+			productReference = 3EA8B1952E0F274E005308F3 /* gooddeedswatch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		3EAF38862DE26243003A8DED /* gooddeed */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EAF38922DE26246003A8DED /* Build configuration list for PBXNativeTarget "gooddeed" */;
@@ -112,10 +261,12 @@
 				3EAF38832DE26243003A8DED /* Sources */,
 				3EAF38842DE26243003A8DED /* Frameworks */,
 				3EAF38852DE26243003A8DED /* Resources */,
+				3EA8B1A02E0F274E005308F3 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3EA8B19E2E0F274E005308F3 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				3EAF38892DE26243003A8DED /* gooddeed */,
@@ -162,6 +313,17 @@
 				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
+					3EA8B17E2E0F274B005308F3 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					3EA8B18A2E0F274E005308F3 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 3EA8B17E2E0F274B005308F3;
+					};
+					3EA8B1942E0F274E005308F3 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 3EA8B17E2E0F274B005308F3;
+					};
 					3EAF38862DE26243003A8DED = {
 						CreatedOnToolsVersion = 16.3;
 					};
@@ -190,11 +352,35 @@
 			targets = (
 				3EAF38862DE26243003A8DED /* gooddeed */,
 				3EBC42AA2E0EEC7600C6A23F /* GoodDeedTests */,
+				3EA8B17E2E0F274B005308F3 /* gooddeedswatch Watch App */,
+				3EA8B18A2E0F274E005308F3 /* gooddeedswatch Watch AppTests */,
+				3EA8B1942E0F274E005308F3 /* gooddeedswatch Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3EA8B17D2E0F274B005308F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EA8B1892E0F274E005308F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EA8B1932E0F274E005308F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3EAF38852DE26243003A8DED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,6 +398,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3EA8B17B2E0F274B005308F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EA8B1872E0F274E005308F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EA8B1912E0F274E005308F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3EAF38832DE26243003A8DED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,6 +436,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3EA8B18D2E0F274E005308F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EA8B17E2E0F274B005308F3 /* gooddeedswatch Watch App */;
+			targetProxy = 3EA8B18C2E0F274E005308F3 /* PBXContainerItemProxy */;
+		};
+		3EA8B1972E0F274E005308F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EA8B17E2E0F274B005308F3 /* gooddeedswatch Watch App */;
+			targetProxy = 3EA8B1962E0F274E005308F3 /* PBXContainerItemProxy */;
+		};
+		3EA8B19E2E0F274E005308F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EA8B17E2E0F274B005308F3 /* gooddeedswatch Watch App */;
+			targetProxy = 3EA8B19D2E0F274E005308F3 /* PBXContainerItemProxy */;
+		};
 		3EBC42B02E0EEC7600C6A23F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3EAF38862DE26243003A8DED /* gooddeed */;
@@ -237,6 +459,144 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3EA8B1A12E0F274E005308F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F94S465KR5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = gooddeedswatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.gooddeed.gooddeedsapp;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gooddeed.gooddeedsapp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		3EA8B1A22E0F274E005308F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F94S465KR5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = gooddeedswatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.gooddeed.gooddeedsapp;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gooddeed.gooddeedsapp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		3EA8B1A32E0F274E005308F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F94S465KR5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gooddeed.gooddeedswatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gooddeedswatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/gooddeedswatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		3EA8B1A42E0F274E005308F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F94S465KR5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gooddeed.gooddeedswatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gooddeedswatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/gooddeedswatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		3EA8B1A52E0F274E005308F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F94S465KR5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gooddeed.gooddeedswatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "gooddeedswatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		3EA8B1A62E0F274E005308F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F94S465KR5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gooddeed.gooddeedswatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "gooddeedswatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
 		3EAF38902DE26246003A8DED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -461,6 +821,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3EA8B1A72E0F274E005308F3 /* Build configuration list for PBXNativeTarget "gooddeedswatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EA8B1A12E0F274E005308F3 /* Debug */,
+				3EA8B1A22E0F274E005308F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EA8B1A82E0F274E005308F3 /* Build configuration list for PBXNativeTarget "gooddeedswatch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EA8B1A32E0F274E005308F3 /* Debug */,
+				3EA8B1A42E0F274E005308F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EA8B1A92E0F274E005308F3 /* Build configuration list for PBXNativeTarget "gooddeedswatch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EA8B1A52E0F274E005308F3 /* Debug */,
+				3EA8B1A62E0F274E005308F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3EAF38822DE26243003A8DED /* Build configuration list for PBXProject "gooddeed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
