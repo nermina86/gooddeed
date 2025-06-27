@@ -4,5 +4,7 @@
 <dict>
 	<key>Launch Screen Interface File Name</key>
 	<string>LaunchScreen</string>
+	<key>uILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
 </dict>
 </plist>

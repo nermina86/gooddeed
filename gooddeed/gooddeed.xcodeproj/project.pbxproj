@@ -6,8 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3EBC42B82E0EEE4400C6A23F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBC42B72E0EEE4400C6A23F /* XCTest.framework */; platformFilter = ios; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3EBC42AF2E0EEC7600C6A23F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EAF387F2DE26243003A8DED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EAF38862DE26243003A8DED;
+			remoteInfo = gooddeed;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3EAF38872DE26243003A8DED /* gooddeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gooddeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EBC42AB2E0EEC7600C6A23F /* GoodDeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodDeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EBC42B72E0EEE4400C6A23F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -29,6 +45,11 @@
 			path = gooddeed;
 			sourceTree = "<group>";
 		};
+		3EBC42AC2E0EEC7600C6A23F /* GoodDeedTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GoodDeedTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +60,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3EBC42A82E0EEC7600C6A23F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EBC42B82E0EEE4400C6A23F /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				3EAF38892DE26243003A8DED /* gooddeed */,
+				3EBC42AC2E0EEC7600C6A23F /* GoodDeedTests */,
+				3EBC42B62E0EEE4400C6A23F /* Frameworks */,
 				3EAF38882DE26243003A8DED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,8 +85,17 @@
 			isa = PBXGroup;
 			children = (
 				3EAF38872DE26243003A8DED /* gooddeed.app */,
+				3EBC42AB2E0EEC7600C6A23F /* GoodDeedTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3EBC42B62E0EEE4400C6A23F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EBC42B72E0EEE4400C6A23F /* XCTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +123,29 @@
 			productReference = 3EAF38872DE26243003A8DED /* gooddeed.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3EBC42AA2E0EEC7600C6A23F /* GoodDeedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EBC42B12E0EEC7600C6A23F /* Build configuration list for PBXNativeTarget "GoodDeedTests" */;
+			buildPhases = (
+				3EBC42A72E0EEC7600C6A23F /* Sources */,
+				3EBC42A82E0EEC7600C6A23F /* Frameworks */,
+				3EBC42A92E0EEC7600C6A23F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EBC42B02E0EEC7600C6A23F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				3EBC42AC2E0EEC7600C6A23F /* GoodDeedTests */,
+			);
+			name = GoodDeedTests;
+			packageProductDependencies = (
+			);
+			productName = GoodDeedTests;
+			productReference = 3EBC42AB2E0EEC7600C6A23F /* GoodDeedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -95,6 +158,10 @@
 				TargetAttributes = {
 					3EAF38862DE26243003A8DED = {
 						CreatedOnToolsVersion = 16.3;
+					};
+					3EBC42AA2E0EEC7600C6A23F = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 3EAF38862DE26243003A8DED;
 					};
 				};
 			};
@@ -113,12 +180,20 @@
 			projectRoot = "";
 			targets = (
 				3EAF38862DE26243003A8DED /* gooddeed */,
+				3EBC42AA2E0EEC7600C6A23F /* GoodDeedTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3EAF38852DE26243003A8DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EBC42A92E0EEC7600C6A23F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,7 +210,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3EBC42A72E0EEC7600C6A23F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3EBC42B02E0EEC7600C6A23F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EAF38862DE26243003A8DED /* gooddeed */;
+			targetProxy = 3EBC42AF2E0EEC7600C6A23F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3EAF38902DE26246003A8DED /* Debug */ = {
@@ -325,6 +415,40 @@
 			};
 			name = Release;
 		};
+		3EBC42B22E0EEC7600C6A23F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gooddeed.GoodDeedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gooddeed.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/gooddeed";
+			};
+			name = Debug;
+		};
+		3EBC42B32E0EEC7600C6A23F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gooddeed.GoodDeedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gooddeed.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/gooddeed";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -342,6 +466,15 @@
 			buildConfigurations = (
 				3EAF38932DE26246003A8DED /* Debug */,
 				3EAF38942DE26246003A8DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EBC42B12E0EEC7600C6A23F /* Build configuration list for PBXNativeTarget "GoodDeedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EBC42B22E0EEC7600C6A23F /* Debug */,
+				3EBC42B32E0EEC7600C6A23F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
