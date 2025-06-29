@@ -1,17 +1,13 @@
-//
-//  gooddeedswatchApp.swift
-//  gooddeedswatch Watch App
-//
-//  Created by Mina Memisevic on 27. 6. 2025..
-//
-
 import SwiftUI
 
 @main
-struct gooddeedswatch_Watch_AppApp: App {
+struct gooddeedswatchApp: App {
+    @StateObject var viewModel = GoodDeedViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GoodDeedWatchView()
+                .environmentObject(viewModel)
         }
     }
 }

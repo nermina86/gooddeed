@@ -1,98 +1,112 @@
 import Foundation
+import SwiftUI
+
+private let lastRefreshDateKey = "lastDeedRefreshDate"
+
+private func isNewDay(sharedDefaults: UserDefaults) -> Bool {
+    guard let lastDate = sharedDefaults.object(forKey: lastRefreshDateKey) as? Date else {
+        return true
+    }
+    return !Calendar.current.isDateInToday(lastDate)
+}
 
 class GoodDeedViewModel: ObservableObject {
+    private let sharedDefaults = UserDefaults(suiteName: "group.com.gooddeed.gooddeedsapp")!
+
     @Published var todayDeeds: [GoodDeed] = []
     @Published var preferredDeedCount: Int = 5 {
         didSet {
-            UserDefaults.standard.set(preferredDeedCount, forKey: "preferredDeedCount")
+            sharedDefaults.set(preferredDeedCount, forKey: "preferredDeedCount")
             refreshDeeds()
         }
     }
-    
+
     private(set) var allDeeds: [GoodDeed] = []
-    
+
     private let savedDeedsKey = "savedGoodDeeds"
-    
+
     init() {
         loadSavedDeeds()
-        preferredDeedCount = UserDefaults.standard.integer(forKey: "preferredDeedCount")
+        preferredDeedCount = sharedDefaults.integer(forKey: "preferredDeedCount")
         if preferredDeedCount == 0 { preferredDeedCount = 5 }
-        
-        if isNewDay() {
+
+        if isNewDay(sharedDefaults: sharedDefaults) {
             refreshDeeds()
-            UserDefaults.standard.set(Date(), forKey: lastRefreshDateKey)
+            sharedDefaults.set(Date(), forKey: lastRefreshDateKey)
         } else {
             loadTodayDeeds()
         }
     }
-    
+
     func refreshDeeds() {
         let customDeeds = todayDeeds.filter { $0.isCustom }
         let needed = max(0, preferredDeedCount - customDeeds.count)
-        
+
         let availableAutoDeeds = allDeeds
             .filter { deed in
                 !deed.isCustom &&
-                !customDeeds.contains(where: { $0.text.trimmingCharacters(in: .whitespacesAndNewlines) == deed.text.trimmingCharacters(in: .whitespacesAndNewlines) })
+                !customDeeds.contains(where: {
+                    $0.text.trimmingCharacters(in: .whitespacesAndNewlines) == deed.text.trimmingCharacters(in: .whitespacesAndNewlines)
+                })
             }
             .shuffled()
             .prefix(needed)
-        
-        let newDeeds = customDeeds + availableAutoDeeds
-        
+
+        // Važno: konvertuj ArraySlice u Array pre spajanja
+        let newDeedsArray = customDeeds + Array(availableAutoDeeds)
+
         let completedDict = Dictionary(uniqueKeysWithValues: todayDeeds.map { ($0.text, $0.isCompleted) })
-        
-        todayDeeds = newDeeds.map { deed in
+
+        todayDeeds = newDeedsArray.map { deed in
             var d = deed
             d.isCompleted = completedDict[deed.text] ?? false
             return d
         }
-        
+
         saveTodayDeeds()
     }
-    
+
     func saveTodayDeeds() {
         if let data = try? JSONEncoder().encode(todayDeeds) {
-            UserDefaults.standard.set(data, forKey: "todayDeeds")
+            sharedDefaults.set(data, forKey: "todayDeeds")
         }
-        UserDefaults.standard.set(Date(), forKey: lastRefreshDateKey)
+        sharedDefaults.set(Date(), forKey: lastRefreshDateKey)
     }
-    
+
     private func loadTodayDeeds() {
-        if let data = UserDefaults.standard.data(forKey: "todayDeeds"),
+        if let data = sharedDefaults.data(forKey: "todayDeeds"),
            let saved = try? JSONDecoder().decode([GoodDeed].self, from: data) {
             todayDeeds = saved
         } else {
             refreshDeeds()
         }
     }
-    
+
     func snooze(deed: GoodDeed) {
         if let index = todayDeeds.firstIndex(where: { $0.id == deed.id }) {
-            // Replace with a random deed from allDeeds
             todayDeeds[index] = allDeeds.randomElement() ?? GoodDeed(text: "Do something kind!")
             saveTodayDeeds()
         }
     }
-    
+
     func addDeed(newDeed: String) {
         let trimmed = newDeed.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { return }
-        
+
         let deed = GoodDeed(text: trimmed, isCustom: true)
         todayDeeds.insert(deed, at: 0)
         saveTodayDeeds()
     }
-    
+
     func markAsDone(deed: GoodDeed) {
         if let index = todayDeeds.firstIndex(where: { $0.id == deed.id }) {
             todayDeeds[index].isCompleted.toggle()
             saveTodayDeeds()
         }
     }
-    
+
     private func loadSavedDeeds() {
-        if let data = UserDefaults.standard.data(forKey: savedDeedsKey),
+        if let data = sharedDefaults.data(forKey: savedDeedsKey),
            let saved = try? JSONDecoder().decode([GoodDeed].self, from: data) {
             allDeeds = saved
         } else {
@@ -172,23 +186,12 @@ class GoodDeedViewModel: ObservableObject {
                 GoodDeed(text: "Be patient in a stressful situation"),
                 GoodDeed(text: "Write or speak publicly against injustice"),
                 GoodDeed(text: "Help someone find a job or get internship"),
+                GoodDeed(text: "Pause and reflect on what truly gives your life meaning to your existence"),
+                GoodDeed(text: "Make yourself enjoy a peaceful day, free from stress, let it be filled with calmness"),
+                GoodDeed(text: "Think back to the last time you laughed with all your heart. Try to recall that"),
+                GoodDeed(text: "Think of the last time you did something nice for yourself. Do it again if it makes you happy")
             ]
         }
     }
-    
-    private func saveDeeds() {
-        if let data = try? JSONEncoder().encode(allDeeds) {
-            UserDefaults.standard.set(data, forKey: savedDeedsKey)
-        }
-    }
-}
-
-private let lastRefreshDateKey = "lastDeedRefreshDate"
-
-private func isNewDay() -> Bool {
-    guard let lastDate = UserDefaults.standard.object(forKey: lastRefreshDateKey) as? Date else {
-        return true
-    }
-    return !Calendar.current.isDateInToday(lastDate)
 }
 
