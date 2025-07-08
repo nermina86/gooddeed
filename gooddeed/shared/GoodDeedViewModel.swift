@@ -158,7 +158,7 @@ class GoodDeedViewModel: ObservableObject {
                 GoodDeed(text: "Encourage others to keep learning and growing"),
                 GoodDeed(text: "Pay for somebody's coffee"),
                 GoodDeed(text: "Speak up when you witness unfair treatment or bullying"),
-                GoodDeed(text: "Educate yourself or others about social injustice"),
+                GoodDeed(text: "Educate yourself or others about some social injustice"),
                 GoodDeed(text: "Offer a helping hand to someone in need"),
                 GoodDeed(text: "Check in on a sick person / call somebody who is ill"),
                 GoodDeed(text: "Donate old tech devices to those in need"),
@@ -171,7 +171,7 @@ class GoodDeedViewModel: ObservableObject {
                 GoodDeed(text: "Give someone a ride or share the same transportation"),
                 GoodDeed(text: "Help a coworker with a project / student with their studies"),
                 GoodDeed(text: "Leave a generous tip for a server"),
-                GoodDeed(text: "Create or share helpful online tutorials or guides"),
+                GoodDeed(text: "Create or share helpful online tutorial or guidelines"),
                 GoodDeed(text: "Donate clothes you no longer use"),
                 GoodDeed(text: "Spend time playing with or reading to a child"),
                 GoodDeed(text: "Write an inspirational note to someone"),
@@ -187,7 +187,7 @@ class GoodDeedViewModel: ObservableObject {
                 GoodDeed(text: "Write or speak publicly against injustice"),
                 GoodDeed(text: "Help someone find a job or get internship"),
                 GoodDeed(text: "Pause and reflect on what truly gives your life meaning to your existence"),
-                GoodDeed(text: "Make yourself enjoy a peaceful day, free from stress, let it be filled with calmness"),
+                GoodDeed(text: "Make yourself enjoy a peaceful day, free from stress, filled with calmness"),
                 GoodDeed(text: "Think back to the last time you laughed with all your heart. Try to recall that"),
                 GoodDeed(text: "Think of the last time you did something nice for yourself. Do it again if it makes you happy")
             ]
