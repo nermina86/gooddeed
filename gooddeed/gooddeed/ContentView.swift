@@ -1,4 +1,3 @@
-//ContentView
 import SwiftUI
 
 struct ContentView: View {
@@ -12,68 +11,68 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            if !showIntro { }
-
-            NavigationView {
-                VStack(spacing: 20) {
-                    Text("Today's Good Deeds you will do")
-                        .font(.headline)
-                        .padding(.top, 20)
-
-                    ScrollView {
-                        VStack(spacing: 16) {
-                            ForEach(viewModel.todayDeeds.indices, id: \.self) { index in
-                                let deed = viewModel.todayDeeds[index]
-                                HStack {
-                                    Text("\(index+1). \(deed.text)")
-                                        .strikethrough(deed.isCompleted)
-                                        .foregroundColor(deed.isCompleted ? .red : .primary)
-                                    Spacer()
-                                    Button(action: {
-                                        withAnimation { viewModel.markAsDone(deed: deed) }
-                                    }) {
-                                        Image(systemName: deed.isCompleted ? "checkmark.circle.fill" : "checkmark.circle")
-                                            .font(.title2)
-                                            .foregroundColor(.green)
-                                    }
-                                    .disabled(isDoneForToday)
-
-                                    Button(action: {
-                                        withAnimation { viewModel.snooze(deed: deed) }
-                                    }) {
-                                        Image(systemName: "xmark.circle")
-                                            .font(.title2)
-                                            .foregroundColor(.red)
-                                    }
-                                    .disabled(isDoneForToday)
-                                }
-                                .padding()
-                                .background(Color(.systemGray6))
-                                .cornerRadius(10)
-                                .shadow(radius: 3)
-                            }
-                        }
-                        .padding(.horizontal)
-                    }
-
-                    Button(action: { showAddDeed = true }) {
-                        Text("➕ Add a Good Deed")
+            if !showIntro {
+                NavigationView {
+                    VStack(spacing: 20) {
+                        Text("Today's Good Deeds you will do")
                             .font(.headline)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(12)
+                            .padding(.top, 20)
+
+                        ScrollView {
+                            VStack(spacing: 16) {
+                                ForEach(viewModel.todayDeeds.indices, id: \.self) { index in
+                                    let deed = viewModel.todayDeeds[index]
+                                    HStack {
+                                        Text("\(index+1). \(deed.title)")
+                                            .strikethrough(deed.isCompleted)
+                                            .foregroundColor(deed.isCompleted ? .red : .primary)
+                                        Spacer()
+                                        Button(action: {
+                                            withAnimation { viewModel.markAsDone(deed: deed) }
+                                        }) {
+                                            Image(systemName: deed.isCompleted ? "checkmark.circle.fill" : "checkmark.circle")
+                                                .font(.title2)
+                                                .foregroundColor(.green)
+                                        }
+                                        .disabled(isDoneForToday)
+
+                                        Button(action: {
+                                            withAnimation { viewModel.snooze(deed: deed) }
+                                        }) {
+                                            Image(systemName: "xmark.circle")
+                                                .font(.title2)
+                                                .foregroundColor(.red)
+                                        }
+                                        .disabled(isDoneForToday)
+                                    }
+                                    .padding()
+                                    .background(Color(.systemGray6))
+                                    .cornerRadius(10)
+                                    .shadow(radius: 3)
+                                }
+                            }
+                            .padding(.horizontal)
+                        }
+
+                        Button(action: { showAddDeed = true }) {
+                            Text("➕ Add a Good Deed")
+                                .font(.headline)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(12)
+                        }
+                        .disabled(isDoneForToday)
+                        .padding([.horizontal, .bottom], 20)
                     }
-                    .disabled(isDoneForToday)
-                    .padding([.horizontal, .bottom], 20)
-                }
-                .navigationBarHidden(true)
-                .sheet(isPresented: $showAddDeed) { addDeedSheet }
-                .onAppear {
-                    NotificationManager.shared.requestPermission()
-                    NotificationManager.shared.logAppOpen()
-                    NotificationManager.shared.scheduleSmart(message: "How about one small good deed today?")
+                    .navigationBarHidden(true)
+                    .sheet(isPresented: $showAddDeed) { addDeedSheet }
+                    .onAppear {
+                        NotificationManager.shared.requestPermission()
+                        NotificationManager.shared.logAppOpen()
+                        NotificationManager.shared.scheduleSmart(message: "How about one small good deed today?")
+                    }
                 }
             }
 
@@ -99,7 +98,7 @@ struct ContentView: View {
                 .padding(.horizontal)
             Button("Add") {
                 if !newDeedText.trimmingCharacters(in: .whitespaces).isEmpty {
-                    viewModel.addDeed(newDeed: newDeedText)
+                    viewModel.addDeed(title: newDeedText)
                     newDeedText = ""
                     showAddDeed = false
                 }
@@ -140,9 +139,7 @@ struct ContentView: View {
                 .cornerRadius(10)
                 .padding(.horizontal)
 
-                // 🟡 TikTok-style Share dugme sa print()
                 Button(action: {
-                    print("Share button tapped")  // ← Ovdje provjeravaš klik
                     showShareSheet = true
                 }) {
                     HStack {
@@ -166,18 +163,15 @@ struct ContentView: View {
 
     private var introOverlay: some View {
         NavigationView {
-            IntroView(showIntro: $showIntro, viewModel: viewModel)
+            IntroView(
+                showIntro: $showIntro,
+                preferredDeedCount: $viewModel.preferredDeedCount,
+                onStart: {
+                    viewModel.refreshDeeds()
+                    showIntro = false
+                }
+            )
         }
         .edgesIgnoringSafeArea(.all)
     }
 }
-
-#if DEBUG
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .environment(\.colorScheme, .light)
-    }
-}
-#endif
-

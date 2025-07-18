@@ -4,33 +4,32 @@ struct WatchIntroView: View {
     @ObservedObject var viewModel: GoodDeedViewModel
 
     var body: some View {
-        TabView {
-            ForEach(viewModel.todayDeeds.prefix(3), id: \.id) { deed in
-                VStack(spacing: 10) {
-                    Text(deed.text)
-                        .font(.title2)
-                        .multilineTextAlignment(.center)
-                        .lineLimit(3)
-                        .padding()
+        ZStack {
+            LinearGradient(
+                gradient: Gradient(colors: [Color.blue, Color.green]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .edgesIgnoringSafeArea(.all)
 
-                    Button(action: {
-                        viewModel.markAsDone(deed: deed)
-                    }) {
-                        Text(deed.isCompleted ? "✅ Done" : "Mark as done")
-                            .font(.headline)
-                            .foregroundColor(deed.isCompleted ? .green : .blue)
-                            .padding(.vertical, 6)
-                            .padding(.horizontal, 12)
-                            .background(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(deed.isCompleted ? Color.green : Color.blue, lineWidth: 2)
-                            )
-                    }
+            VStack(spacing: 12) {
+                Text("🌟 Welcome to Good Deeds!")
+                    .font(.headline)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.white)
+
+                ForEach(Array(viewModel.todayDeeds.prefix(3)), id: \.id) { deed in
+                    Text("• \(deed.title)")
+                        .font(.footnote)
+                        .foregroundColor(.white)
+                        .padding(6)
+                        .background(Color.black.opacity(0.25))
+                        .cornerRadius(8)
                 }
-                .id(deed.id) // 🔁 Forsira re-render kad se stanje promijeni
+
+                Spacer()
             }
+            .padding()
         }
-        .tabViewStyle(PageTabViewStyle())
     }
 }
-

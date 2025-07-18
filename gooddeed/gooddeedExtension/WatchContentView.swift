@@ -5,27 +5,27 @@ struct WatchContentView: View {
 
     var body: some View {
         VStack {
-            Text("Good Deeds on Apple Watch")
+            Text("Good Deeds")
                 .font(.headline)
                 .padding()
-            
-            List(viewModel.todayDeeds) { deed in
-                HStack {
-                    Text(deed.text)
-                        .strikethrough(deed.isCompleted)
-                        .foregroundColor(deed.isCompleted ? .green : .primary)
-                    Spacer()
-                    Button(action: {
-                        viewModel.markAsDone(deed: deed)
-                    }) {
-                        Image(systemName: deed.isCompleted ? "checkmark.circle.fill" : "circle")
+
+            List {
+                ForEach(viewModel.todayDeeds, id: \.id) { deed in
+                    HStack {
+                        Text(deed.title)
+                            .strikethrough(deed.isCompleted)
+                            .foregroundColor(deed.isCompleted ? .green : .primary)
+
+                        Spacer()
+
+                        Button(action: {
+                            viewModel.markAsDone(deed: deed)
+                        }) {
+                            Image(systemName: deed.isCompleted ? "checkmark.circle.fill" : "circle")
+                        }
                     }
                 }
             }
-        }
-        .onAppear {
-            // Refresh deeds on watch appear
-            viewModel.refreshDeeds()
         }
     }
 }

@@ -2,11 +2,11 @@ import SwiftUI
 
 @main
 struct gooddeedswatchApp: App {
-    @StateObject var viewModel = GoodDeedViewModel()
+    @StateObject private var viewModel = GoodDeedViewModel()
 
     var body: some Scene {
         WindowGroup {
-            GoodDeedWatchView()
+            WatchContentView(viewModel: viewModel)
                 .environmentObject(viewModel)
         }
     }

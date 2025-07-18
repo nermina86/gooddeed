@@ -19,8 +19,18 @@
 		3E88F3FF2E0F388D00499B14 /* GoodDeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3BE2E0F2BB000499B14 /* GoodDeed.swift */; };
 		3EA8B19F2E0F274E005308F3 /* gooddeedswatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3EA8B17F2E0F274B005308F3 /* gooddeedswatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3EBC42B82E0EEE4400C6A23F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBC42B72E0EEE4400C6A23F /* XCTest.framework */; platformFilter = ios; };
-		3EBC42BD2E0EF92800C6A23F /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBC42BC2E0EF92800C6A23F /* FirebaseAI */; };
-		3EBC42BF2E0EF92800C6A23F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBC42BE2E0EF92800C6A23F /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		3EBC6AED2E2A53B900EC0153 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC6AEC2E2A53B900EC0153 /* ConnectivityManager.swift */; };
+		3EBC6AEE2E2A53B900EC0153 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC6AEC2E2A53B900EC0153 /* ConnectivityManager.swift */; };
+		3EBC6AEF2E2A53B900EC0153 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC6AEC2E2A53B900EC0153 /* ConnectivityManager.swift */; };
+		3EBC6AF12E2A53C400EC0153 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC6AF02E2A53C400EC0153 /* Notification+Extension.swift */; };
+		3EBC6AF22E2A53C400EC0153 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC6AF02E2A53C400EC0153 /* Notification+Extension.swift */; };
+		3EBC6AF32E2A53C400EC0153 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC6AF02E2A53C400EC0153 /* Notification+Extension.swift */; };
+		3EBC6AFD2E2AB85700EC0153 /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBC6AFC2E2AB85700EC0153 /* FirebaseAI */; };
+		3EBC6AFF2E2AB85700EC0153 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBC6AFE2E2AB85700EC0153 /* FirebaseAnalytics */; };
+		3EBC6B012E2AB85700EC0153 /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBC6B002E2AB85700EC0153 /* FirebaseAnalyticsCore */; };
+		3EEB52A92E2686E500C24A18 /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */; };
+		3EEB52AA2E2686E500C24A18 /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */; };
+		3EEB52AB2E26910B00C24A18 /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,13 +117,16 @@
 		3EAF38872DE26243003A8DED /* gooddeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gooddeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBC42AB2E0EEC7600C6A23F /* GoodDeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodDeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBC42B72E0EEE4400C6A23F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3EBC6AEC2E2A53B900EC0153 /* ConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
+		3EBC6AF02E2A53C400EC0153 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AppGroup.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		3E4F2ABC2E10C3CB00BD7CFA /* Exceptions for "gooddeedswatch Watch App" folder in "gooddeedswatch Watch App" target */ = {
+		3E85647B2E2AC1AC00E95DD3 /* Exceptions for "gooddeedExtension" folder in "gooddeedswatch Watch App" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Assets.xcassets,
+				WatchContentView.swift,
 			);
 			target = 3EA8B17E2E0F274B005308F3 /* gooddeedswatch Watch App */;
 		};
@@ -121,6 +134,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
+				WatchContentView.swift,
 			);
 			target = 3E88F3E72E0F2F1A00499B14 /* gooddeedExtension */;
 		};
@@ -137,6 +151,7 @@
 		3E88F3E92E0F2F1A00499B14 /* gooddeedExtension */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				3E85647B2E2AC1AC00E95DD3 /* Exceptions for "gooddeedExtension" folder in "gooddeedswatch Watch App" target */,
 				3E88F43F2E10C1BF00499B14 /* Exceptions for "gooddeedExtension" folder in "gooddeedExtension" target */,
 			);
 			path = gooddeedExtension;
@@ -144,9 +159,6 @@
 		};
 		3EA8B1802E0F274B005308F3 /* gooddeedswatch Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				3E4F2ABC2E10C3CB00BD7CFA /* Exceptions for "gooddeedswatch Watch App" folder in "gooddeedswatch Watch App" target */,
-			);
 			path = "gooddeedswatch Watch App";
 			sourceTree = "<group>";
 		};
@@ -208,8 +220,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EBC42BD2E0EF92800C6A23F /* FirebaseAI in Frameworks */,
-				3EBC42BF2E0EF92800C6A23F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				3EBC6AFF2E2AB85700EC0153 /* FirebaseAnalytics in Frameworks */,
+				3EBC6B012E2AB85700EC0153 /* FirebaseAnalyticsCore in Frameworks */,
+				3EBC6AFD2E2AB85700EC0153 /* FirebaseAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,9 +240,12 @@
 		3E88F3F72E0F339300499B14 /* shared */ = {
 			isa = PBXGroup;
 			children = (
+				3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */,
 				3E88F3C52E0F2BB000499B14 /* NotificationManager.swift */,
 				3E88F3C02E0F2BB000499B14 /* GoodDeedViewModel.swift */,
 				3E88F3BE2E0F2BB000499B14 /* GoodDeed.swift */,
+				3EBC6AEC2E2A53B900EC0153 /* ConnectivityManager.swift */,
+				3EBC6AF02E2A53C400EC0153 /* Notification+Extension.swift */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -385,8 +401,9 @@
 			);
 			name = gooddeed;
 			packageProductDependencies = (
-				3EBC42BC2E0EF92800C6A23F /* FirebaseAI */,
-				3EBC42BE2E0EF92800C6A23F /* FirebaseAnalyticsWithoutAdIdSupport */,
+				3EBC6AFC2E2AB85700EC0153 /* FirebaseAI */,
+				3EBC6AFE2E2AB85700EC0153 /* FirebaseAnalytics */,
+				3EBC6B002E2AB85700EC0153 /* FirebaseAnalyticsCore */,
 			);
 			productName = gooddeed;
 			productReference = 3EAF38872DE26243003A8DED /* gooddeed.app */;
@@ -458,7 +475,7 @@
 			mainGroup = 3EAF387E2DE26243003A8DED;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				3EBC42BB2E0EF92800C6A23F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3EBC6AFB2E2AB85700EC0153 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3EAF38882DE26243003A8DED /* Products */;
@@ -526,8 +543,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E88F3FF2E0F388D00499B14 /* GoodDeed.swift in Sources */,
+				3EEB52A92E2686E500C24A18 /* UserDefaults+AppGroup.swift in Sources */,
 				3E88F3FD2E0F388200499B14 /* NotificationManager.swift in Sources */,
 				3E88F3F92E0F36AB00499B14 /* GoodDeedViewModel.swift in Sources */,
+				3EBC6AF12E2A53C400EC0153 /* Notification+Extension.swift in Sources */,
+				3EBC6AEE2E2A53B900EC0153 /* ConnectivityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,8 +555,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EBC6AED2E2A53B900EC0153 /* ConnectivityManager.swift in Sources */,
 				3E88F3FE2E0F388D00499B14 /* GoodDeed.swift in Sources */,
 				3E88F3FC2E0F388200499B14 /* NotificationManager.swift in Sources */,
+				3EBC6AF22E2A53C400EC0153 /* Notification+Extension.swift in Sources */,
+				3EEB52AB2E26910B00C24A18 /* UserDefaults+AppGroup.swift in Sources */,
 				3E88F3F82E0F36AB00499B14 /* GoodDeedViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,7 +584,10 @@
 			files = (
 				3E88F3C92E0F2BB000499B14 /* GoodDeedViewModel.swift in Sources */,
 				3E88F3CD2E0F2BB000499B14 /* NotificationManager.swift in Sources */,
+				3EBC6AF32E2A53C400EC0153 /* Notification+Extension.swift in Sources */,
+				3EEB52AA2E2686E500C24A18 /* UserDefaults+AppGroup.swift in Sources */,
 				3E88F3D02E0F2BB000499B14 /* GoodDeed.swift in Sources */,
+				3EBC6AEF2E2A53B900EC0153 /* ConnectivityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,7 +654,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+				WATCHOS_DEPLOYMENT_TARGET = 6;
 			};
 			name = Debug;
 		};
@@ -658,7 +684,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+				WATCHOS_DEPLOYMENT_TARGET = 6;
 			};
 			name = Release;
 		};
@@ -914,6 +940,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -923,6 +950,10 @@
 		3EAF38932DE26246003A8DED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"\"Standard Architectures (64-bit Intel and Apple)\"",
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -957,6 +988,10 @@
 		3EAF38942DE26246003A8DED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"\"Standard Architectures (64-bit Intel and Apple)\"",
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = gooddeed/gooddeedRelease.entitlements;
@@ -1093,26 +1128,31 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3EBC42BB2E0EF92800C6A23F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		3EBC6AFB2E2AB85700EC0153 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 11.15.0;
+				minimumVersion = 12.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3EBC42BC2E0EF92800C6A23F /* FirebaseAI */ = {
+		3EBC6AFC2E2AB85700EC0153 /* FirebaseAI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3EBC42BB2E0EF92800C6A23F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 3EBC6AFB2E2AB85700EC0153 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAI;
 		};
-		3EBC42BE2E0EF92800C6A23F /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+		3EBC6AFE2E2AB85700EC0153 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3EBC42BB2E0EF92800C6A23F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsWithoutAdIdSupport;
+			package = 3EBC6AFB2E2AB85700EC0153 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		3EBC6B002E2AB85700EC0153 /* FirebaseAnalyticsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3EBC6AFB2E2AB85700EC0153 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

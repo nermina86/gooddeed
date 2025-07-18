@@ -1,13 +1,12 @@
-//IntroView.swift
 import SwiftUI
 
 struct IntroView: View {
     @Binding var showIntro: Bool
-    @ObservedObject var viewModel: GoodDeedViewModel
+    @Binding var preferredDeedCount: Int
+    var onStart: () -> Void
 
     var body: some View {
         ZStack {
-            // Fully opaque background gradient
             LinearGradient(
                 gradient: Gradient(colors: [Color.blue, Color.green]),
                 startPoint: .topLeading,
@@ -22,67 +21,43 @@ struct IntroView: View {
                     .font(.system(size: 34, weight: .bold))
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-                    .padding(.top)
-
-                Text("Each day, you'll get simple but meaningful actions to make this world a brighter place. You can skip deeds that don’t fit or add your own.")
-                    .font(.body)
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
                     .padding(.horizontal)
 
-                
-                VStack(spacing: 16) {
-                    Text("How many deeds per day do you want to be displayed?")
-                        .font(.headline)
+                Text("How many deeds per day do you want to do?")
+                    .foregroundColor(.white)
+                    .font(.headline)
+
+                Stepper(value: $preferredDeedCount, in: 1...10) {
+                    Text("\(preferredDeedCount) deeds")
                         .foregroundColor(.white)
-
-                    Stepper(value: $viewModel.preferredDeedCount, in: 1...10) {
-                        Text("\(viewModel.preferredDeedCount) deeds")
-                            .foregroundColor(.white)
-                            .font(.body)
-                    }
-                    .padding()
-                    .background(Color.white.opacity(0.1))
-                    .cornerRadius(12)
+                        .font(.title2)
                 }
+                .padding()
+                .background(Color.white.opacity(0.2))
+                .cornerRadius(12)
 
-                Button(action: {
-                    showIntro = false
-                    viewModel.refreshDeeds()
-                }) {
-                    Text("Get Started 😇")
-                        .font(.headline)
+                Button(action: onStart) {
+                    Text("Start")
+                        .font(.title2.bold())
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.white)
                         .foregroundColor(.blue)
-                        .cornerRadius(15)
-                        .shadow(radius: 5)
+                        .cornerRadius(12)
+                        .shadow(radius: 4)
                 }
                 .padding(.horizontal)
 
-                
-                
-                // ✅ Privacy Policy Button
-                        NavigationLink(destination: PrivacyPolicyView()) {
-                            Text("Privacy Policy")
-                                .font(.footnote)
-                                .underline()
-                                .foregroundColor(.gray)
-                        }
+                NavigationLink(destination: PrivacyPolicyView()) {
+                    Text("Privacy Policy")
+                        .font(.footnote)
+                        .underline()
+                        .foregroundColor(.white)
+                }
+
                 Spacer()
             }
-            
             .padding()
         }
     }
 }
-
-#if DEBUG
-struct IntroView_Previews: PreviewProvider {
-    static var previews: some View {
-        IntroView(showIntro: .constant(true), viewModel: GoodDeedViewModel())
-    }
-}
-#endif
-
