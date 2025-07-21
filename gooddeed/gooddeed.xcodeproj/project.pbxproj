@@ -128,6 +128,7 @@
 			membershipExceptions = (
 				WatchConnectivityManager.swift,
 				WatchContentView.swift,
+				WatchIntroView.swift,
 			);
 			target = 3EA8B17E2E0F274B005308F3 /* gooddeedswatch Watch App */;
 		};
@@ -135,9 +136,9 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
-				Untitled.swift,
 				WatchConnectivityManager.swift,
 				WatchContentView.swift,
+				WatchIntroView.swift,
 			);
 			target = 3E88F3E72E0F2F1A00499B14 /* gooddeedExtension */;
 		};

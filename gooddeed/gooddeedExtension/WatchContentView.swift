@@ -1,5 +1,8 @@
-
+// This file is part of the "GoodDeeds" application.
+// © 2025 Nermina Memisevic. All rights reserved.
+//
 import SwiftUI
+import WatchKit
 
 struct WatchContentView: View {
     @ObservedObject var viewModel: GoodDeedViewModel
@@ -30,6 +33,9 @@ struct WatchContentView: View {
                     }
                 }
             }
+        }
+        .onAppear {
+            WKInterfaceDevice.current().play(.click)
         }
     }
 }

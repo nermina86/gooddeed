@@ -1,35 +1,47 @@
+// This file is part of the "GoodDeeds" application.
+// © 2025 Nermina Memisevic. All rights reserved.
+//
+
 import SwiftUI
 
 struct WatchIntroView: View {
-    @ObservedObject var viewModel: GoodDeedViewModel
+    @AppStorage("hasSeenIntro") var hasSeenIntro: Bool = false
+    @AppStorage("preferredDeedCount") var preferredDeedCount: Int = 3
 
     var body: some View {
-        ZStack {
-            LinearGradient(
-                gradient: Gradient(colors: [Color.blue, Color.green]),
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .edgesIgnoringSafeArea(.all)
+        VStack(spacing: 12) {
+            Text("🌟 The GoodDeedsApp")
+                .font(.headline)
+                .multilineTextAlignment(.center)
 
-            VStack(spacing: 12) {
-                Text("🌟 Welcome to Good Deeds!")
-                    .font(.headline)
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.white)
+            Text("Swipe to snooze deed")
+                .font(.caption2)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+            Text("Tap deed to mark done")
+                .font(.caption2)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+        
+            Text("How many deeds daily?")
+                .font(.caption2)
 
-                ForEach(Array(viewModel.todayDeeds.prefix(3)), id: \.id) { deed in
-                    Text("• \(deed.title)")
-                        .font(.footnote)
-                        .foregroundColor(.white)
-                        .padding(6)
-                        .background(Color.black.opacity(0.25))
-                        .cornerRadius(8)
+            Picker("Deeds", selection: $preferredDeedCount) {
+                ForEach(1...10, id: \.self) { count in
+                    Text("\(count)").tag(count)
                 }
-
-                Spacer()
             }
-            .padding()
+            .pickerStyle(.wheel)
+            .frame(height: 60) // Reduce height
+            .clipped()
+            .labelsHidden()
+            .scaleEffect(0.8) // Scale down visually
+
+            Button("Start") {
+                hasSeenIntro = true
+            }
+            .buttonStyle(.borderedProminent)
         }
+        .padding()
     }
 }
