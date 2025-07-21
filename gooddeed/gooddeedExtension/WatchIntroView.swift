@@ -18,11 +18,7 @@ struct WatchIntroView: View {
                 .font(.caption2)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
-            Text("Tap deed to mark done")
-                .font(.caption2)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
-        
+
             Text("How many deeds daily?")
                 .font(.caption2)
 
