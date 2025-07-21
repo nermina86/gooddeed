@@ -1,3 +1,4 @@
+
 import SwiftUI
 
 struct WatchContentView: View {
@@ -11,17 +12,20 @@ struct WatchContentView: View {
 
             List {
                 ForEach(viewModel.todayDeeds, id: \.id) { deed in
-                    HStack {
-                        Text(deed.title)
-                            .strikethrough(deed.isCompleted)
-                            .foregroundColor(deed.isCompleted ? .green : .primary)
-
-                        Spacer()
-
-                        Button(action: {
-                            viewModel.markAsDone(deed: deed)
-                        }) {
-                            Image(systemName: deed.isCompleted ? "checkmark.circle.fill" : "circle")
+                    Button {
+                        viewModel.markAsDone(deed: deed)
+                    } label: {
+                        HStack {
+                            Text(deed.title)
+                                .strikethrough(deed.isCompleted)
+                                .foregroundColor(deed.isCompleted ? .gray : .primary)
+                        }
+                    }
+                    .swipeActions {
+                        Button(role: .destructive) {
+                            viewModel.snooze(deed: deed)
+                        } label: {
+                            Label("Snooze", systemImage: "zzz")
                         }
                     }
                 }
