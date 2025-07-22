@@ -31,6 +31,7 @@
 		3EBC6AF12E2A53C400EC0153 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC6AF02E2A53C400EC0153 /* Notification+Extension.swift */; };
 		3EBC6AF22E2A53C400EC0153 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC6AF02E2A53C400EC0153 /* Notification+Extension.swift */; };
 		3EBC6AF32E2A53C400EC0153 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC6AF02E2A53C400EC0153 /* Notification+Extension.swift */; };
+		3EBD4F652E2FF7E200D30679 /* gooddeedswatchApp.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD4F642E2FF5E100D30679 /* gooddeedswatchApp.entitlements */; };
 		3EEB52A92E2686E500C24A18 /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */; };
 		3EEB52AA2E2686E500C24A18 /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */; };
 		3EEB52AB2E26910B00C24A18 /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */; };
@@ -144,11 +145,10 @@
 			membershipExceptions = (
 				Info.plist,
 				WatchConnectivityManager.swift,
-				WatchIntroView.swift,
 			);
 			target = 3E88F3E72E0F2F1A00499B14 /* gooddeedExtension */;
 		};
-		3EA6C5492E0AEAB0007FAD51 /* Exceptions for "gooddeed" folder in "gooddeed" target */ = {
+		3EAA37C72E30062B0041FD1F /* Exceptions for "gooddeed" folder in "gooddeed" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -180,7 +180,7 @@
 		3EAF38892DE26243003A8DED /* gooddeed */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				3EA6C5492E0AEAB0007FAD51 /* Exceptions for "gooddeed" folder in "gooddeed" target */,
+				3EAA37C72E30062B0041FD1F /* Exceptions for "gooddeed" folder in "gooddeed" target */,
 			);
 			path = gooddeed;
 			sourceTree = "<group>";
@@ -511,6 +511,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EBD4F652E2FF7E200D30679 /* gooddeedswatchApp.entitlements in Resources */,
 				3E940FB42E2FF09F007D42CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,7 +668,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6;
+				WATCHOS_DEPLOYMENT_TARGET = 7;
 			};
 			name = Debug;
 		};
@@ -697,7 +698,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6;
+				WATCHOS_DEPLOYMENT_TARGET = 7;
 			};
 			name = Release;
 		};

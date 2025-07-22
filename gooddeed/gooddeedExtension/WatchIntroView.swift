@@ -39,7 +39,7 @@ struct WatchIntroView: View {
             Button("Start") {
                 hasSeenIntro = true
             }
-            .buttonStyle(.borderedProminent)
+            .buttonStyle(.bordered)
         }
         .padding()
     }

@@ -2,25 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleIdentifier</key>
-	<string>com.gooddeed.gooddeed.watchkitextension</string>
-	<key>CFBundleName</key>
-	<string>gooddeedExtension</string>
-	<key>CFBundleDisplayName</key>
-	<string>GoodDeed Watch Extension</string>
-	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
-	<key>CFBundlePackageType</key>
-	<string>XPC!</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
-	<key>CFBundleVersion</key>
-	<string>1</string>
-	<key>WKWatchKitApp</key>
-	<true/>
-	<key>MinimumOSVersion</key>
-	<string>6.0</string>
-	<key>NSPrincipalClass</key>
-	<string>WKExtension</string>
+    <key>CFBundleDisplayName</key>
+    <string>GoodDeeds Watch</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.gooddeed.watch.extension</string>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundlePackageType</key>
+    <string>XPC!</string>
+    <key>NSExtension</key>
+    <dict>
+        <key>NSExtensionPointIdentifier</key>
+        <string>com.apple.watchkit</string>
+    </dict>
 </dict>
 </plist>
