@@ -1,12 +1,12 @@
-// This file is part of the "GoodDeeds" application.
+// WatchIntroView.swift
+// GoodDeeds
 // © 2025 Nermina Memisevic. All rights reserved.
-//
 
 import SwiftUI
 
 struct WatchIntroView: View {
-    @AppStorage("hasSeenIntro") var hasSeenIntro: Bool = false
-    @AppStorage("preferredDeedCount") var preferredDeedCount: Int = 3
+    @AppStorage("hasSeenIntro", store: .appGroup) var hasSeenIntro: Bool = false
+    @AppStorage("preferredDeedCount", store: .appGroup) var preferredDeedCount: Int = 3
 
     var body: some View {
         VStack(spacing: 12) {
@@ -18,8 +18,8 @@ struct WatchIntroView: View {
                 .font(.caption2)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
-            
-            Text("Tap to mark as done")
+
+            Text("Tap deed to mark it done")
                 .font(.caption2)
 
             Text("How many deeds daily?")
@@ -31,10 +31,10 @@ struct WatchIntroView: View {
                 }
             }
             .pickerStyle(.wheel)
-            .frame(height: 60) // Reduce height
+            .frame(height: 60)
             .clipped()
             .labelsHidden()
-            .scaleEffect(0.8) // Scale down visually
+            .scaleEffect(0.8)
 
             Button("Start") {
                 hasSeenIntro = true

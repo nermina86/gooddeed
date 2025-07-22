@@ -32,9 +32,8 @@ final class GoodDeedViewModel: ObservableObject {
         let savedCount = sharedDefaults?.integer(forKey: "preferredDeedCount") ?? 3
         preferredDeedCount = savedCount
 
-        if sharedDefaults?.array(forKey: "todayDeeds") != nil {
-            loadDeedsFromSharedDefaults()
-        } else {
+        loadDeedsFromSharedDefaults()
+        if todayDeeds.isEmpty {
             loadInitialDeeds()
         }
 
@@ -50,14 +49,9 @@ final class GoodDeedViewModel: ObservableObject {
     }
 
     private func loadInitialDeeds() {
-        let allDeeds = [
-            "Help someone", "Recycle trash", "Call a loved one", "Pick up litter", "Compliment a stranger",
-            "Smile at someone", "Donate old clothes", "Let someone go ahead of you", "Say thank you", "Text a friend",
-            "Help someone1", "Recycle trash1", "Call a loved one1", "Pick up litter1", "Compliment a stranger1",
-            "Smile at someone1", "Donate old clothes1", "Let someone go ahead of you1", "Say thank you1", "Text a friend1",
-        ]
+        let count = preferredDeedCount > 0 ? preferredDeedCount : 3
 
-        let selected = allDeeds.shuffled().prefix(preferredDeedCount)
+        let selected = DeedSource.allDeeds.shuffled().prefix(count)
         self.todayDeeds = selected.map {
             GoodDeed(id: UUID(), title: $0, isCompleted: false)
         }
@@ -81,10 +75,7 @@ final class GoodDeedViewModel: ObservableObject {
 
         todayDeeds.remove(at: index)
 
-        let suggestions = [
-            "Write a kind note2", "Give someone a hug2", "Hold the door2", "Pick flowers2", "Send a positive text2"
-        ].filter { suggestion in
-            !todayDeeds.contains(where: { $0.title == suggestion })
+        let suggestions = DeedSource.allDeeds.filter { suggestion in !todayDeeds.contains(where: { $0.title == suggestion }) && suggestion != deed.title
         }
 
         if let newTitle = suggestions.randomElement() {
