@@ -7,13 +7,14 @@ import WatchConnectivity
 
 final class GoodDeedViewModel: ObservableObject {
     @Published var todayDeeds: [GoodDeed] = []
-    @Published var preferredDeedCount: Int = 3
+    @Published var preferredDeedCount: Int
 
     private let sharedDefaults = UserDefaults(suiteName: "group.com.gooddeed.gooddeedsapp")
 
     private func saveDeedsToSharedDefaults() {
         let encoded = todayDeeds.map { ["id": $0.id.uuidString, "title": $0.title, "isCompleted": $0.isCompleted] }
         sharedDefaults?.set(encoded, forKey: "todayDeeds")
+        sharedDefaults?.set(preferredDeedCount, forKey: "preferredDeedCount")
     }
 
     private func loadDeedsFromSharedDefaults() {
@@ -28,8 +29,14 @@ final class GoodDeedViewModel: ObservableObject {
     }
 
     init() {
-        loadDeedsFromSharedDefaults()
-        loadInitialDeeds()
+        let savedCount = sharedDefaults?.integer(forKey: "preferredDeedCount") ?? 3
+        preferredDeedCount = savedCount
+
+        if sharedDefaults?.array(forKey: "todayDeeds") != nil {
+            loadDeedsFromSharedDefaults()
+        } else {
+            loadInitialDeeds()
+        }
 
         NotificationCenter.default.addObserver(
             forName: .didReceiveDeed,
@@ -52,9 +59,9 @@ final class GoodDeedViewModel: ObservableObject {
 
         let selected = allDeeds.shuffled().prefix(preferredDeedCount)
         self.todayDeeds = selected.map {
-            saveDeedsToSharedDefaults()
-            return GoodDeed(id: UUID(), title: $0, isCompleted: false)
+            GoodDeed(id: UUID(), title: $0, isCompleted: false)
         }
+        saveDeedsToSharedDefaults()
     }
 
     func refreshDeeds() {
@@ -99,4 +106,3 @@ final class GoodDeedViewModel: ObservableObject {
         }
     }
 }
-
