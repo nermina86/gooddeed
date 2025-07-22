@@ -116,7 +116,6 @@
 		3E88F3E82E0F2F1A00499B14 /* gooddeedExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = gooddeedExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E940F9A2E2FE193007D42CD /* DeedSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeedSource.swift; sourceTree = "<group>"; };
 		3E940FAF2E2FF09F007D42CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3E940FB02E2FF09F007D42CD /* gooddeedswatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "gooddeedswatch Watch App.entitlements"; sourceTree = "<group>"; };
 		3E940FB12E2FF09F007D42CD /* gooddeedswatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gooddeedswatchApp.swift; sourceTree = "<group>"; };
 		3E940FB22E2FF09F007D42CD /* WatchContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchContentView.swift; sourceTree = "<group>"; };
 		3EA8B17F2E0F274B005308F3 /* gooddeedswatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gooddeedswatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +126,7 @@
 		3EBC42B72E0EEE4400C6A23F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3EBC6AEC2E2A53B900EC0153 /* ConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
 		3EBC6AF02E2A53C400EC0153 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		3EBD4F642E2FF5E100D30679 /* gooddeedswatchApp.entitlements */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; path = gooddeedswatchApp.entitlements; sourceTree = "<group>"; };
 		3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AppGroup.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,15 +253,15 @@
 			path = shared;
 			sourceTree = "<group>";
 		};
-		3E940FB32E2FF09F007D42CD /* gooddeedswatch Watch App */ = {
+		3E940FB32E2FF09F007D42CD /* gooddeedswatchApp */ = {
 			isa = PBXGroup;
 			children = (
 				3E940FAF2E2FF09F007D42CD /* Assets.xcassets */,
-				3E940FB02E2FF09F007D42CD /* gooddeedswatch Watch App.entitlements */,
 				3E940FB12E2FF09F007D42CD /* gooddeedswatchApp.swift */,
 				3E940FB22E2FF09F007D42CD /* WatchContentView.swift */,
+				3EBD4F642E2FF5E100D30679 /* gooddeedswatchApp.entitlements */,
 			);
-			path = "gooddeedswatch Watch App";
+			path = gooddeedswatchApp;
 			sourceTree = "<group>";
 		};
 		3EAF387E2DE26243003A8DED = {
@@ -270,7 +270,7 @@
 				3E88F3F72E0F339300499B14 /* shared */,
 				3EAF38892DE26243003A8DED /* gooddeed */,
 				3EBC42AC2E0EEC7600C6A23F /* GoodDeedTests */,
-				3E940FB32E2FF09F007D42CD /* gooddeedswatch Watch App */,
+				3E940FB32E2FF09F007D42CD /* gooddeedswatchApp */,
 				3EA8B18E2E0F274E005308F3 /* gooddeedswatch Watch AppTests */,
 				3EA8B1982E0F274E005308F3 /* gooddeedswatch Watch AppUITests */,
 				3E88F3E92E0F2F1A00499B14 /* gooddeedExtension */,
