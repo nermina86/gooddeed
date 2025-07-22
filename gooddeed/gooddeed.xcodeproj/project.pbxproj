@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E4F2ABD2E10C50800BD7CFA /* gooddeedExtension.appex in New Copy Files Phase */ = {isa = PBXBuildFile; fileRef = 3E88F3E82E0F2F1A00499B14 /* gooddeedExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3E88F3C92E0F2BB000499B14 /* GoodDeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3C02E0F2BB000499B14 /* GoodDeedViewModel.swift */; };
 		3E88F3CD2E0F2BB000499B14 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3C52E0F2BB000499B14 /* NotificationManager.swift */; };
 		3E88F3D02E0F2BB000499B14 /* GoodDeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3BE2E0F2BB000499B14 /* GoodDeed.swift */; };
@@ -76,17 +75,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3E4F2ABA2E10C28100BD7CFA /* New Copy Files Phase */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				3E4F2ABD2E10C50800BD7CFA /* gooddeedExtension.appex in New Copy Files Phase */,
-			);
-			name = "New Copy Files Phase";
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		3E88F3F22E0F2F1B00499B14 /* Embed ExtensionKit Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,7 +321,6 @@
 				3EA8B17C2E0F274B005308F3 /* Frameworks */,
 				3EA8B17D2E0F274B005308F3 /* Resources */,
 				3E88F3F22E0F2F1B00499B14 /* Embed ExtensionKit Extensions */,
-				3E4F2ABA2E10C28100BD7CFA /* New Copy Files Phase */,
 			);
 			buildRules = (
 			);
