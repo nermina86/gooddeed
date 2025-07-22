@@ -18,6 +18,9 @@ struct WatchIntroView: View {
                 .font(.caption2)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
+            
+            Text("Tap to mark as done")
+                .font(.caption2)
 
             Text("How many deeds daily?")
                 .font(.caption2)

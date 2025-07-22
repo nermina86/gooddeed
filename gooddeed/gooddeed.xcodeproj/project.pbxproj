@@ -25,9 +25,6 @@
 		3EBC6AF12E2A53C400EC0153 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC6AF02E2A53C400EC0153 /* Notification+Extension.swift */; };
 		3EBC6AF22E2A53C400EC0153 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC6AF02E2A53C400EC0153 /* Notification+Extension.swift */; };
 		3EBC6AF32E2A53C400EC0153 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC6AF02E2A53C400EC0153 /* Notification+Extension.swift */; };
-		3EBC6AFD2E2AB85700EC0153 /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBC6AFC2E2AB85700EC0153 /* FirebaseAI */; };
-		3EBC6AFF2E2AB85700EC0153 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBC6AFE2E2AB85700EC0153 /* FirebaseAnalytics */; };
-		3EBC6B012E2AB85700EC0153 /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBC6B002E2AB85700EC0153 /* FirebaseAnalyticsCore */; };
 		3EEB52A92E2686E500C24A18 /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */; };
 		3EEB52AA2E2686E500C24A18 /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */; };
 		3EEB52AB2E26910B00C24A18 /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */; };
@@ -224,9 +221,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EBC6AFF2E2AB85700EC0153 /* FirebaseAnalytics in Frameworks */,
-				3EBC6B012E2AB85700EC0153 /* FirebaseAnalyticsCore in Frameworks */,
-				3EBC6AFD2E2AB85700EC0153 /* FirebaseAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,9 +399,6 @@
 			);
 			name = gooddeed;
 			packageProductDependencies = (
-				3EBC6AFC2E2AB85700EC0153 /* FirebaseAI */,
-				3EBC6AFE2E2AB85700EC0153 /* FirebaseAnalytics */,
-				3EBC6B002E2AB85700EC0153 /* FirebaseAnalyticsCore */,
 			);
 			productName = gooddeed;
 			productReference = 3EAF38872DE26243003A8DED /* gooddeed.app */;
@@ -479,7 +470,6 @@
 			mainGroup = 3EAF387E2DE26243003A8DED;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				3EBC6AFB2E2AB85700EC0153 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3EAF38882DE26243003A8DED /* Products */;
@@ -1130,35 +1120,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		3EBC6AFB2E2AB85700EC0153 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 12.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3EBC6AFC2E2AB85700EC0153 /* FirebaseAI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3EBC6AFB2E2AB85700EC0153 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAI;
-		};
-		3EBC6AFE2E2AB85700EC0153 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3EBC6AFB2E2AB85700EC0153 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		3EBC6B002E2AB85700EC0153 /* FirebaseAnalyticsCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3EBC6AFB2E2AB85700EC0153 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsCore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3EAF387F2DE26243003A8DED /* Project object */;
 }
