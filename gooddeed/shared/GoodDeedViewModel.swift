@@ -1,6 +1,3 @@
-// This file is part of the "GoodDeeds" application.
-// © 2025 Nermina Memisevic. All rights reserved.
-//
 import SwiftUI
 import Combine
 import WatchConnectivity
@@ -50,7 +47,6 @@ final class GoodDeedViewModel: ObservableObject {
 
     private func loadInitialDeeds() {
         let count = preferredDeedCount > 0 ? preferredDeedCount : 3
-
         let selected = DeedSource.allDeeds.shuffled().prefix(count)
         self.todayDeeds = selected.map {
             GoodDeed(id: UUID(), title: $0, isCompleted: false)
@@ -75,7 +71,8 @@ final class GoodDeedViewModel: ObservableObject {
 
         todayDeeds.remove(at: index)
 
-        let suggestions = DeedSource.allDeeds.filter { suggestion in !todayDeeds.contains(where: { $0.title == suggestion }) && suggestion != deed.title
+        let suggestions = DeedSource.allDeeds.filter { suggestion in
+            !todayDeeds.contains(where: { $0.title == suggestion }) && suggestion != deed.title
         }
 
         if let newTitle = suggestions.randomElement() {
@@ -96,4 +93,16 @@ final class GoodDeedViewModel: ObservableObject {
             todayDeeds.append(deed)
         }
     }
+
+    func markDeedAsCompleted(deed: GoodDeed) {
+        if let index = todayDeeds.firstIndex(of: deed) {
+            todayDeeds[index].isCompleted = true
+            saveDeedsToSharedDefaults()
+        }
+    }
+
+    var allDeedsCompleted: Bool {
+        todayDeeds.allSatisfy { $0.isCompleted }
+    }
 }
+

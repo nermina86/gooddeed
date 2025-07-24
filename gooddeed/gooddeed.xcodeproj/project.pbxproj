@@ -19,7 +19,6 @@
 		3E940F9C2E2FE196007D42CD /* DeedSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E940F9A2E2FE193007D42CD /* DeedSource.swift */; };
 		3E940F9D2E2FE196007D42CD /* DeedSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E940F9A2E2FE193007D42CD /* DeedSource.swift */; };
 		3E940FA12E2FE444007D42CD /* DeedSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E940F9A2E2FE193007D42CD /* DeedSource.swift */; };
-		3E940FB42E2FF09F007D42CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E940FAF2E2FF09F007D42CD /* Assets.xcassets */; };
 		3E940FB52E2FF09F007D42CD /* WatchContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E940FB22E2FF09F007D42CD /* WatchContentView.swift */; };
 		3E940FB62E2FF09F007D42CD /* gooddeedswatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E940FB12E2FF09F007D42CD /* gooddeedswatchApp.swift */; };
 		3EA8B19F2E0F274E005308F3 /* gooddeedswatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3EA8B17F2E0F274B005308F3 /* gooddeedswatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -30,7 +29,6 @@
 		3EBC6AF12E2A53C400EC0153 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC6AF02E2A53C400EC0153 /* Notification+Extension.swift */; };
 		3EBC6AF22E2A53C400EC0153 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC6AF02E2A53C400EC0153 /* Notification+Extension.swift */; };
 		3EBC6AF32E2A53C400EC0153 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC6AF02E2A53C400EC0153 /* Notification+Extension.swift */; };
-		3EBD4F652E2FF7E200D30679 /* gooddeedswatchApp.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD4F642E2FF5E100D30679 /* gooddeedswatchApp.entitlements */; };
 		3EEB52A92E2686E500C24A18 /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */; };
 		3EEB52AA2E2686E500C24A18 /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */; };
 		3EEB52AB2E26910B00C24A18 /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */; };
@@ -131,7 +129,6 @@
 		3E88F43F2E10C1BF00499B14 /* Exceptions for "gooddeedExtension" folder in "gooddeedExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
 				WatchConnectivityManager.swift,
 			);
 			target = 3E88F3E72E0F2F1A00499B14 /* gooddeedExtension */;
@@ -319,7 +316,6 @@
 			buildPhases = (
 				3EA8B17B2E0F274B005308F3 /* Sources */,
 				3EA8B17C2E0F274B005308F3 /* Frameworks */,
-				3EA8B17D2E0F274B005308F3 /* Resources */,
 				3E88F3F22E0F2F1B00499B14 /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
@@ -491,15 +487,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3EA8B17D2E0F274B005308F3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3EBD4F652E2FF7E200D30679 /* gooddeedswatchApp.entitlements in Resources */,
-				3E940FB42E2FF09F007D42CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,6 +681,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = gooddeedswatchApp/gooddeedswatchApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -725,6 +713,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = gooddeedswatchApp/gooddeedswatchApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
