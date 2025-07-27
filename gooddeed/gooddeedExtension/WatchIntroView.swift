@@ -10,7 +10,7 @@ struct WatchIntroView: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("🌟 The GoodDeedsApp")
+            Text("🌟 The GoodDeeds")
                 .font(.headline)
                 .multilineTextAlignment(.center)
 

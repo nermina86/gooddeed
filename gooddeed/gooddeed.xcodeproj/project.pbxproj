@@ -152,27 +152,12 @@
 			path = gooddeedExtension;
 			sourceTree = "<group>";
 		};
-		3EA8B18E2E0F274E005308F3 /* gooddeedswatch Watch AppTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "gooddeedswatch Watch AppTests";
-			sourceTree = "<group>";
-		};
-		3EA8B1982E0F274E005308F3 /* gooddeedswatch Watch AppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "gooddeedswatch Watch AppUITests";
-			sourceTree = "<group>";
-		};
 		3EAF38892DE26243003A8DED /* gooddeed */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				3EAA37C72E30062B0041FD1F /* Exceptions for "gooddeed" folder in "gooddeed" target */,
 			);
 			path = gooddeed;
-			sourceTree = "<group>";
-		};
-		3EBC42AC2E0EEC7600C6A23F /* GoodDeedTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = GoodDeedTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -254,10 +239,7 @@
 			children = (
 				3E88F3F72E0F339300499B14 /* shared */,
 				3EAF38892DE26243003A8DED /* gooddeed */,
-				3EBC42AC2E0EEC7600C6A23F /* GoodDeedTests */,
 				3E940FB32E2FF09F007D42CD /* gooddeedswatchApp */,
-				3EA8B18E2E0F274E005308F3 /* gooddeedswatch Watch AppTests */,
-				3EA8B1982E0F274E005308F3 /* gooddeedswatch Watch AppUITests */,
 				3E88F3E92E0F2F1A00499B14 /* gooddeedExtension */,
 				3EBC42B62E0EEE4400C6A23F /* Frameworks */,
 				3EAF38882DE26243003A8DED /* Products */,
@@ -343,9 +325,6 @@
 			dependencies = (
 				3EA8B18D2E0F274E005308F3 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				3EA8B18E2E0F274E005308F3 /* gooddeedswatch Watch AppTests */,
-			);
 			name = "gooddeedswatch Watch AppTests";
 			packageProductDependencies = (
 			);
@@ -365,9 +344,6 @@
 			);
 			dependencies = (
 				3EA8B1972E0F274E005308F3 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				3EA8B1982E0F274E005308F3 /* gooddeedswatch Watch AppUITests */,
 			);
 			name = "gooddeedswatch Watch AppUITests";
 			packageProductDependencies = (
@@ -412,9 +388,6 @@
 			);
 			dependencies = (
 				3EBC42B02E0EEC7600C6A23F /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				3EBC42AC2E0EEC7600C6A23F /* GoodDeedTests */,
 			);
 			name = GoodDeedTests;
 			packageProductDependencies = (

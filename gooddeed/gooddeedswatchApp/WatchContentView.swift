@@ -34,7 +34,7 @@ struct WatchContentView: View {
                                 Button(role: .destructive) {
                                     viewModel.snooze(deed: deed)
                                 } label: {
-                                    Label("Snooze", systemImage: "zzz")
+                                    Label("Snooze", systemImage: "X")
                                 }
                             }
                         }
