@@ -29,9 +29,8 @@ final class GoodDeedViewModel: ObservableObject {
         let savedCount = sharedDefaults?.integer(forKey: "preferredDeedCount") ?? 3
         preferredDeedCount = savedCount
 
-        loadDeedsFromSharedDefaults()
-        if todayDeeds.isEmpty {
-            loadInitialDeeds()
+        DispatchQueue.main.async { [weak self] in
+            self?.loadDeedsIfNeeded()
         }
 
         NotificationCenter.default.addObserver(
@@ -42,6 +41,13 @@ final class GoodDeedViewModel: ObservableObject {
             if let deed = notification.object as? GoodDeed {
                 self?.receive(deed: deed)
             }
+        }
+    }
+
+    func loadDeedsIfNeeded() {
+        loadDeedsFromSharedDefaults()
+        if todayDeeds.isEmpty {
+            loadInitialDeeds()
         }
     }
 
@@ -84,6 +90,7 @@ final class GoodDeedViewModel: ObservableObject {
     func addDeed(title: String) {
         let deed = GoodDeed(id: UUID(), title: title, isCompleted: false)
         todayDeeds.append(deed)
+        saveDeedsToSharedDefaults()
     }
 
     private func receive(deed: GoodDeed) {

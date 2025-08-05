@@ -8,12 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3E88F3C92E0F2BB000499B14 /* GoodDeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3C02E0F2BB000499B14 /* GoodDeedViewModel.swift */; };
-		3E88F3CD2E0F2BB000499B14 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3C52E0F2BB000499B14 /* NotificationManager.swift */; };
 		3E88F3D02E0F2BB000499B14 /* GoodDeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3BE2E0F2BB000499B14 /* GoodDeed.swift */; };
 		3E88F3F82E0F36AB00499B14 /* GoodDeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3C02E0F2BB000499B14 /* GoodDeedViewModel.swift */; };
 		3E88F3F92E0F36AB00499B14 /* GoodDeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3C02E0F2BB000499B14 /* GoodDeedViewModel.swift */; };
-		3E88F3FC2E0F388200499B14 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3C52E0F2BB000499B14 /* NotificationManager.swift */; };
-		3E88F3FD2E0F388200499B14 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3C52E0F2BB000499B14 /* NotificationManager.swift */; };
 		3E88F3FE2E0F388D00499B14 /* GoodDeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3BE2E0F2BB000499B14 /* GoodDeed.swift */; };
 		3E88F3FF2E0F388D00499B14 /* GoodDeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3BE2E0F2BB000499B14 /* GoodDeed.swift */; };
 		3E940F9C2E2FE196007D42CD /* DeedSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E940F9A2E2FE193007D42CD /* DeedSource.swift */; };
@@ -99,7 +96,6 @@
 /* Begin PBXFileReference section */
 		3E88F3BE2E0F2BB000499B14 /* GoodDeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeed.swift; sourceTree = "<group>"; };
 		3E88F3C02E0F2BB000499B14 /* GoodDeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeedViewModel.swift; sourceTree = "<group>"; };
-		3E88F3C52E0F2BB000499B14 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		3E88F3E82E0F2F1A00499B14 /* gooddeedExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = gooddeedExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E940F9A2E2FE193007D42CD /* DeedSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeedSource.swift; sourceTree = "<group>"; };
 		3E940FAF2E2FF09F007D42CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -214,7 +210,6 @@
 			children = (
 				3E940F9A2E2FE193007D42CD /* DeedSource.swift */,
 				3EEB52A72E2686DC00C24A18 /* UserDefaults+AppGroup.swift */,
-				3E88F3C52E0F2BB000499B14 /* NotificationManager.swift */,
 				3E88F3C02E0F2BB000499B14 /* GoodDeedViewModel.swift */,
 				3E88F3BE2E0F2BB000499B14 /* GoodDeed.swift */,
 				3EBC6AEC2E2A53B900EC0153 /* ConnectivityManager.swift */,
@@ -500,7 +495,6 @@
 			files = (
 				3E88F3FF2E0F388D00499B14 /* GoodDeed.swift in Sources */,
 				3EEB52A92E2686E500C24A18 /* UserDefaults+AppGroup.swift in Sources */,
-				3E88F3FD2E0F388200499B14 /* NotificationManager.swift in Sources */,
 				3E88F3F92E0F36AB00499B14 /* GoodDeedViewModel.swift in Sources */,
 				3EBC6AF12E2A53C400EC0153 /* Notification+Extension.swift in Sources */,
 				3EBC6AEE2E2A53B900EC0153 /* ConnectivityManager.swift in Sources */,
@@ -516,7 +510,6 @@
 				3E88F3FE2E0F388D00499B14 /* GoodDeed.swift in Sources */,
 				3E940FB52E2FF09F007D42CD /* WatchContentView.swift in Sources */,
 				3E940FB62E2FF09F007D42CD /* gooddeedswatchApp.swift in Sources */,
-				3E88F3FC2E0F388200499B14 /* NotificationManager.swift in Sources */,
 				3EBC6AF22E2A53C400EC0153 /* Notification+Extension.swift in Sources */,
 				3EEB52AB2E26910B00C24A18 /* UserDefaults+AppGroup.swift in Sources */,
 				3E940F9D2E2FE196007D42CD /* DeedSource.swift in Sources */,
@@ -543,7 +536,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E88F3C92E0F2BB000499B14 /* GoodDeedViewModel.swift in Sources */,
-				3E88F3CD2E0F2BB000499B14 /* NotificationManager.swift in Sources */,
 				3EBC6AF32E2A53C400EC0153 /* Notification+Extension.swift in Sources */,
 				3EEB52AA2E2686E500C24A18 /* UserDefaults+AppGroup.swift in Sources */,
 				3E88F3D02E0F2BB000499B14 /* GoodDeed.swift in Sources */,

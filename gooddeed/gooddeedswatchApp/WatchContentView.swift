@@ -59,6 +59,9 @@ struct WatchContentView: View {
             }
         }
         .onAppear {
+            DispatchQueue.main.async {
+                viewModel.loadDeedsIfNeeded()
+            }
             WKInterfaceDevice.current().play(.click)
         }
     }

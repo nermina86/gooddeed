@@ -1,6 +1,6 @@
 // This file is part of the "GoodDeeds" application.
 // © 2025 Nermina Memisevic. All rights reserved.
-//
+
 import SwiftUI
 
 struct ContentView: View {
@@ -72,9 +72,9 @@ struct ContentView: View {
                     .navigationBarHidden(true)
                     .sheet(isPresented: $showAddDeed) { addDeedSheet }
                     .onAppear {
-                        NotificationManager.shared.requestPermission()
-                        NotificationManager.shared.logAppOpen()
-                        NotificationManager.shared.scheduleSmart(message: "How about one small good deed today?")
+                        DispatchQueue.main.async {
+                            viewModel.loadDeedsIfNeeded()
+                        }
                     }
                 }
             }
@@ -131,7 +131,6 @@ struct ContentView: View {
                 Button("Done for Today") {
                     withAnimation {
                         isDoneForToday = true
-                        NotificationManager.shared.scheduleSmart(message: "Ready for more kindness tomorrow?")
                     }
                 }
                 .font(.headline)
