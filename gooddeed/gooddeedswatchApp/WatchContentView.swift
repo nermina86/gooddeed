@@ -63,7 +63,12 @@ struct WatchContentView: View {
                 viewModel.loadDeedsIfNeeded()
             }
             WKInterfaceDevice.current().play(.click)
+
+            // 🔔 Schedule silent daily notification on Watch
+            WatchNotificationScheduler.requestPermission()
+            WatchNotificationScheduler.scheduleDailyNotification(for: Date())
         }
+        
     }
 
     private func triggerFireworks() {

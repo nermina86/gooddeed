@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5139D12E44C08C0001710B /* WatchNotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5139D02E44C0890001710B /* WatchNotificationScheduler.swift */; };
 		3E88F3C92E0F2BB000499B14 /* GoodDeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3C02E0F2BB000499B14 /* GoodDeedViewModel.swift */; };
 		3E88F3D02E0F2BB000499B14 /* GoodDeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3BE2E0F2BB000499B14 /* GoodDeed.swift */; };
 		3E88F3F82E0F36AB00499B14 /* GoodDeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E88F3C02E0F2BB000499B14 /* GoodDeedViewModel.swift */; };
@@ -94,6 +95,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E5139D02E44C0890001710B /* WatchNotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchNotificationScheduler.swift; sourceTree = "<group>"; };
 		3E88F3BE2E0F2BB000499B14 /* GoodDeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeed.swift; sourceTree = "<group>"; };
 		3E88F3C02E0F2BB000499B14 /* GoodDeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeedViewModel.swift; sourceTree = "<group>"; };
 		3E88F3E82E0F2F1A00499B14 /* gooddeedExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = gooddeedExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +223,7 @@
 		3E940FB32E2FF09F007D42CD /* gooddeedswatchApp */ = {
 			isa = PBXGroup;
 			children = (
+				3E5139D02E44C0890001710B /* WatchNotificationScheduler.swift */,
 				3E940FAF2E2FF09F007D42CD /* Assets.xcassets */,
 				3E940FB12E2FF09F007D42CD /* gooddeedswatchApp.swift */,
 				3E940FB22E2FF09F007D42CD /* WatchContentView.swift */,
@@ -513,6 +516,7 @@
 				3EBC6AF22E2A53C400EC0153 /* Notification+Extension.swift in Sources */,
 				3EEB52AB2E26910B00C24A18 /* UserDefaults+AppGroup.swift in Sources */,
 				3E940F9D2E2FE196007D42CD /* DeedSource.swift in Sources */,
+				3E5139D12E44C08C0001710B /* WatchNotificationScheduler.swift in Sources */,
 				3E88F3F82E0F36AB00499B14 /* GoodDeedViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

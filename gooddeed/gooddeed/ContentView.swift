@@ -20,7 +20,7 @@ struct ContentView: View {
                         Text("Today's Good Deeds you will do")
                             .font(.headline)
                             .padding(.top, 20)
-
+                        
                         ScrollView {
                             VStack(spacing: 16) {
                                 ForEach(viewModel.todayDeeds.indices, id: \.self) { index in
@@ -38,7 +38,7 @@ struct ContentView: View {
                                                 .foregroundColor(.green)
                                         }
                                         .disabled(isDoneForToday)
-
+                                        
                                         Button(action: {
                                             withAnimation { viewModel.snooze(deed: deed) }
                                         }) {
@@ -56,7 +56,7 @@ struct ContentView: View {
                             }
                             .padding(.horizontal)
                         }
-
+                        
                         Button(action: { showAddDeed = true }) {
                             Text("➕ Add a Good Deed")
                                 .font(.headline)
@@ -75,7 +75,12 @@ struct ContentView: View {
                         DispatchQueue.main.async {
                             viewModel.loadDeedsIfNeeded()
                         }
+
+                        // 🔔 Schedule silent daily notification
+                        NotificationScheduler.requestPermission()
+                        NotificationScheduler.storeLastActiveTime()
                     }
+                    
                 }
             }
 
