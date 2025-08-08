@@ -1,11 +1,7 @@
 //
-//  WatchNotificationScheduler.swift
-//  gooddeedswatchApp
+// This file is part of the "GoodDeeds" application.
+// © 2025 Nermina Memisevic. All rights reserved.
 //
-//  Created by ChatGPT on your request.
-//  Schedules daily silent notifications directly on Apple Watch.
-//
-
 import Foundation
 import UserNotifications
 
